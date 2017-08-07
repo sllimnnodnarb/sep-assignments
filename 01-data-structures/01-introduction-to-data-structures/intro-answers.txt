@@ -1,0 +1,25 @@
+1.  How does your data structure allow developers to access and manipulate the data?
+
+With the Pixel class the attributes that compose a Pixel are accessed to be used throughout the class.
+
+At initialization the RGB values and XY values are asigned to global variables.
+
+RGB values compose colors.  If a color is not on the usable scale of 0-255 (white to black), then a default color value is set; namely 0 for values less than 0 (-1..), and 255 for values above 255 (256..).
+
+Each RGB color is then validated during the initialize method to ensure the colors values operate within the constraints o 0-255.
+
+The screen then plots the colors to a grid to be displayed.
+
+As we view screens they are a specific height and width (iphone, monitor, television).  We ensure that the x,y corrdinates of each color pixel are positive numbers, and that they fall within the confines of the dimensions of the television. (3d not accounted for at this point).
+
+If the pixel falls within the dimensions of the screen, then then each pixel is plotted to the screen.
+
+
+2.  If a developer wanted to find a specific element in your data structure, how would you search for it?
+
+For a person in the line, they are placed into an array for sorting. The array is called members.  basic array functions are called as alterations are made to the array.  A developer could search for a person in the members 'line' by using the console to ask 'person.first?' or whatever sql query the person wants to run. members[0], etc.
+
+
+3.  What other real-world data can each structure represent?
+
+The possibilities here are endless.  Financial info, economic data, libraries, basically anything that can be categorized, and sorted, animals, constellations, products, to infinite.
