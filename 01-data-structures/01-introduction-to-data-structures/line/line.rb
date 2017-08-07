@@ -33,6 +33,7 @@ class Line
       if person == member
         return member
       end
+    end
   end
 
   private
