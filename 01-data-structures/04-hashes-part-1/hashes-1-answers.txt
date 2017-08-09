@@ -1,0 +1,3 @@
+1.  Explain why doubling the size of the underlying array of your HashClass may be a poor idea.
+
+In any decent sized array, the compounding effect of doubling begins to strain processing and memory functionality.  Specifically available storage space is used up faster and faster, and processing takes longer and longer.  Also memory and processing are finite based on hardware specifications, whereas doubling on a continuum is infinite.  Those two concepts/practices carried to their logical ends cannot marry as one has and end while the other does not.
