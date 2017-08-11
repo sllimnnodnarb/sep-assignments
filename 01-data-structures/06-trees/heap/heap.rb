@@ -1,6 +1,7 @@
 require_relative 'node'
 
-class BinarySearchTree
+class Heap
+  attr_reader :root
 
   def initialize(root)
     @root = root
@@ -8,13 +9,23 @@ class BinarySearchTree
 
   def insert(root, node)
     if root.rating > node.rating
-      root.left.nil? ? (root.left = node) : insert(root.left, node)
+      temp = root
+      @root = node
+      node = temp
+      insert(@root, node)
     else
-      root.right.nil? ? (root.right = node) : insert(root.right, node)
+      if root.left.nil?
+        root.left = node
+      elsif root.right.nil? && root.left != nil
+        root.right = node
+      elsif root.left != nil && root.right != nil && root.left.left != nil && root.left.right != nil
+        insert(root.right, node)
+      elsif root.left != nil && root.right != nil
+        insert(root.left, node)
+      end
     end
   end
 
-  # Recursive Depth First Search
   def find(root, data)
     if root.nil? || data.nil?
       return nil
@@ -38,8 +49,7 @@ class BinarySearchTree
     end
   end
 
-  # Recursive Breadth First Search
-  def printf(children=nil)
+  def printf
     queue = [@root]
     result = []
     while queue.length > 0

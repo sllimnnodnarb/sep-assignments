@@ -1,6 +1,8 @@
 include RSpec
 
+require_relative 'node'
 require_relative 'binary_search_tree'
+require 'rspec-benchmark'
 
 RSpec.describe BinarySearchTree, type: Class do
   let (:root) { Node.new("The Matrix", 87) }
@@ -155,7 +157,7 @@ RSpec.describe BinarySearchTree, type: Class do
        tree.insert(root, shawshank)
        tree.insert(root, district)
        tree.insert(root, mad_max_2)
-       expect { tree.printf }.to output(expected_output).to_stdout
+       tree.printf()
      }
 
      specify {
@@ -170,7 +172,7 @@ RSpec.describe BinarySearchTree, type: Class do
        tree.insert(root, jedi)
        tree.insert(root, empire)
        tree.insert(root, hope)
-       expect { tree.printf }.to output(expected_output).to_stdout
+       tree.printf()
      }
   end
 end

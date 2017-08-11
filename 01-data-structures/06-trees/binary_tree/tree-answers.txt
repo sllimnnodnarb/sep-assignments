@@ -1,0 +1,16 @@
+1. Trees print per the spec.
+
+2. Time comparison between BST and Heap:
+    BST = 0.11566 seconds
+    Heap = 0.10446 seconds
+    Insert:
+      BST = 0.39662 seconds
+      Heap = 0.19161  seconds
+    Find:
+      BST = 0.00021 seconds
+      Heap = 0.00008 seconds
+    Delete:
+      BST = 0.00007
+      Heap = 0.00006
+
+  Heap is all around a faster method based on performance.  BST is particularly slower at inserting and finding, by about 50%.  It seems that binary search could still be useful in small data structures, or in an instance where you have excess performance capacity.  Regardless it seems that Heap would be the best approach all round.
