@@ -1,0 +1,45 @@
+{
+  "movies": [{
+              "title": "Diner",
+              "cast": [
+                  "Steve Guttenberg",
+                  "Daniel Stern",
+                  "Mickey Rourke",
+                  "Kevin Bacon",
+                  "Julia Roberts"
+                ]
+             },
+             {
+              "title": "Footloose",
+              "cast": [
+                  "Kevin Bacon",
+                  "Lori Singer",
+                  "Julia Roberts"
+                ]
+             },
+             {
+              "title": "Flatliners",
+              "cast": [
+                  "Kiefer Sutherland",
+                  "Julia Roberts",
+                  "Kevin Bacon"
+              ]
+             },
+             {
+              "title": "Eat Pray Love",
+              "cast": [
+                  "Julia Roberts",
+                  "Javier Bardem",
+                  "Billy Crudup"
+              ]
+             },
+             {
+              "title": "Spotlight",
+              "cast": [
+                  "Mark Ruffalo",
+                  "Michael Keaton",
+                  "Rachel McAdams"
+              ]
+             }
+           ]
+}
