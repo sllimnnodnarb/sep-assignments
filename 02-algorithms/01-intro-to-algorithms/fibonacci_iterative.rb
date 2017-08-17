@@ -10,6 +10,7 @@ def fib(n)
       fib_0 = fib_1
       fin_1 = temp
     end
+    
    puts fib(0)
    puts fib(1)
    puts fib(2)

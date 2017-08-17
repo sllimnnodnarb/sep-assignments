@@ -1,5 +1,6 @@
 In pseudo-code describe three or more primitive algorithms used in your day-to-day life.
 
+
 1. Necessity to bathe
 
 present = time.now
