@@ -1,0 +1,26 @@
+Bar Chart of Sorting Algorithms
+
+(values in ms)
+
+300   |
+      |
+250   |                               o
+      |
+200   |
+      |
+150   |
+      |                  o
+100   |
+      |
+50    |     o
+      |
+0     |
+      ----------------------------------------
+        QuickSort     HeapSort    BucketSort
+
+
+QuickSort works efficiently because it uses a value already contained in the array that is the midpoint, and the essentially divides and conquers the sorting of the array from within, then simply rejoins the sub arrays that are sorted.  This appear of the three methods to be the quickest method to sort an array.
+
+HeapSort cycles repeatedly through comparisons of index positions of a sorted array and an unsorted array.  Over time the unsorted array grows smaller and the sorted array grows larger until exhaustion.  While effective it is slower than Quicksort.
+
+BucketSort is essentially just a compounded QuickSort.  Stated otherwise, QuickSort is the LCF of BucketSort.  BucketSort adds in quicksort in that it runs divide and conquer sorting on a specified number of arrays labeled as buckets.  While the concept of taking a large array and dividing and conquering into a multitude of much smaller arrays is logical, there is an opportunity cost in utilizing resources for the creation of and joining together of the multitude of smaller arrays.  This exponentially adds time to the sorting process, and is thence the slowest method as the benchmark data shows.

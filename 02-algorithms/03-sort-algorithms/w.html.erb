@@ -1,0 +1,45 @@
+<%= render partial: 'abc_theologies/top', locals: { abc_theologies: @abc_theologies } %>
+<div class="container bmar25 tmar25 wid100per">
+  <div class="jumbotron tcent wid100per bpad0 tpad0 bmar0">
+    <table class="w3-table wid100per ht100per tpad0 tmar0 bpad0 bmar0">
+      <tr class="ht100per bmar0 bpad0">
+        <th>
+          <%= link_to "", abc_theologies_v_path, class: "glyphicon glyphicon-menu-left glyphfont lpad0 lmar0 rmar0 rpad0 hvr-grow pull-left" %>
+        </th>
+        <th class="tcent">
+          <%= video_tag("https://s3.ca-central-1.amazonaws.com/abctheology/a-not_narrated.mp4?rel=0&autohide=1", poster: "w_poster.png", controls: :controls, controlsList: "nodownload", width: "100%", autoplay: :autoplay, id: "vid", class: "tcent") %>
+        </th>
+        <th>
+          <%= link_to "", abc_theologies_x_path, class: "glyphicon glyphicon-menu-right glyphfont lpad0 lmar0 rmar0 rpad0 hvr-grow pull-right" %>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <h2 class="col-md-4 tcent darkgrayborder">
+    <div class="mtrpoint">
+      <div class="glyphicon glyphicon-education orangefont font7rem tmar15"></div>
+      <div class="tmar25">
+        <%= link_to "Take the Quiz ", basics_index_path, class: "pointbutton6 lfont hvr-glow bmar25" %>
+      </div>
+    </div>
+  </h2>
+  <h2 class="col-md-4 tcent darkgrayborder">
+    <div class="mtrpoint">
+      <div class="glyphicon glyphicon-scissors midnightbluefont font7rem tmar15"></div>
+      <div class="tmar25">
+        <%= link_to "Learning Activity", abc_theologies_index_path, class: "pointbutton4 lfont hvr-glow bmar25" %>
+      </div>
+    </div>
+  </h2>
+  <h2 class="col-md-4 tcent darkgrayborder">
+    <div class="mtrpoint">
+      <div class="glyphicon glyphicon-book darkgreenfont font7rem tmar15"></div>
+      <div class="tmar25">
+        <%= link_to "Study Scripture", history_index_path, class: "pointbutton5 lfont hvr-glow bmar25" %>
+      </div>
+    </div>
+  </h2>
+</div>
+<%= render partial: 'abc_theologies/bottom', locals: { abc_theologies: @abc_theologies } %>

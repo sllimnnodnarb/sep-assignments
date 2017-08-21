@@ -1,5 +1,5 @@
 class Search
-  def self.binary(arr, value)
+  def self.binary_iterative(arr, value)
     start = 0
     stop = arr.length - 1
 
