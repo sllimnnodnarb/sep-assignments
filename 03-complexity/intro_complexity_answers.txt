@@ -23,10 +23,8 @@ ok
 infinite
 
 
-
 7. What is the Big-O of an algorithm that has the data points above?
 O(2^n)
-
 
 
 8. Write a Ruby script that calculates and prints the N number, given an iteration, for linear search in the worst case (similar to the graph above.

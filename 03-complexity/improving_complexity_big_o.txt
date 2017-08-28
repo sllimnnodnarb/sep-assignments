@@ -1,0 +1,5 @@
+1. Rather than iterating over multiple arrays, the arrays are combined into a single array for iteration.  This optimizes the method, but it runs at O(n) because it iterates n*n times.
+
+2. Merge sort is faster than linear sort, so this is a performance improvement.  The iterations become n*n = n^2. Merge sort yields θ(nlogn) in terms of performance.
+
+3. There is a tradeoff here by using a hash.  While a hash can be sorted, and searched more quickly, the hash itself introduces a new object which impacts available memory.  That aside, it performs at O(n^2) which would be acceptable with small data sizes.
