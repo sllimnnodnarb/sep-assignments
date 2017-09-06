@@ -6,7 +6,6 @@
 O(1) because the value can never change, it is not complex because there are no iterations even, it literally just prints the value passed in to the function.
 
 
-
 2. What's the Big-O of the following algorithm?
   def find_largest(collection)
     largest = collection[0]
@@ -19,7 +18,6 @@ O(1) because the value can never change, it is not complex because there are no 
   end
 
 O(n) seems to be worst case here for the reason that the length of the collection will be the worst case scenario.  It runs in linear time.
-
 
 
 3. What's the Big-O of the following algorithm?
@@ -36,8 +34,7 @@ O(n) seems to be worst case here for the reason that the length of the collectio
     largest
   end
 
-O(n^2) here there is an iteration within an iteration. this will be a slow method based on the fact that n will double with each iteration.  Worst case is that it infinitely doubles.  While linear in measurement it gets slower and slower as n increases.
-
+O(n^2) here there is an iteration within an iteration. This will be a slow method based on the fact that n will double with each iteration.  Each subcollection must be iterated over until the highest number is found, which will happen collection.length.times, then subcollection.length.times after that until the largest value is located. Then the comparison happens against the original. Assuming collection.length is a rational number.  The growth should be linear and increasing dependent on size.
 
 
 4. What's the Big-O of the following algorithm?
@@ -52,6 +49,7 @@ O(n^2) here there is an iteration within an iteration. this will be a slow metho
   end
 
 O(2^n). There are two recursive instances here so when numbers(n-1) + numbers(n-2) it results in "2" raised to the nth power.
+
 
 5. What's the Big-O of the following algorithm?
   def iterative(n)
@@ -68,6 +66,7 @@ O(2^n). There are two recursive instances here so when numbers(n-1) + numbers(n-
   end
 
 O(n) for the fact that the value of n will dictate the runtime.  It should be linear.
+
 
 6. What's the Big-O of the following algorithm?
   def sort(collection, from=0, to=nil)
@@ -121,4 +120,4 @@ O(n) for the fact that the value of n will dictate the runtime.  It should be li
     collection
   end
 
-Θ(n​^2), as the recursive calls increase, they grow exponentially deeper in terms of layers
+O(n​^2), as the recursive calls increase, they grow exponentially deeper in terms of layers.  This true as long as there is something to sort, that is, if the collection is greater than 2. Quicksort cannot pivot unless there are enough indices to establish a pivot; 3. The assumption in any sorting method is that the collection needs to be sorted.  If the collection is already sorted this would result in BigO = O(n^2) because the pivot point would only move one index.
